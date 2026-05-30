@@ -1,0 +1,21 @@
+name = "realty-radar-worker"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+
+# ── Custom domain ─────────────────────────────────────────────────────────────
+# Auto-creates the DNS record on first deploy (zone is on this account).
+[[routes]]
+pattern = "realty-radar-worker.appsforhire.app"
+custom_domain = true
+
+# ── D1 binding ────────────────────────────────────────────────────────────────
+# realty-radar-db, provisioned 2026-05-30 (region WNAM).
+[[d1_databases]]
+binding = "DB"
+database_name = "realty-radar-db"
+database_id = "496e814d-55df-4f3f-9332-17dedfb864fc"
+
+# ── Secrets (set with: npx wrangler secret put <NAME> --name realty-radar-worker) ─
+#   REALIE_API_KEY   — Robert's Realie.ai key (sent as the Authorization header)
+#   APP_TOKEN        — optional shared token; if set, all /realie/* and /db/* calls
+#                      must send  Authorization: Bearer <APP_TOKEN>
