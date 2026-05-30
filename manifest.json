@@ -1,0 +1,10 @@
+{
+  "name": "Realty Radar",
+  "short_name": "Radar",
+  "description": "Show Robert which Rural-Residential-zoned parcels in his watched area(s) changed since he last looked -- sold / transferred, re-valued, foreclosed, or newly matching his land criteria -- so he can act fast on candidates for a small farm plus a couple of tiny houses.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#10b981",
+  "icons": []
+}
